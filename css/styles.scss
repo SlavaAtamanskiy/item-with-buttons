@@ -1,3 +1,11 @@
+//-----------Global-----------------
+@media (max-width: 450px) {
+  .t-Button-label {
+    display: none;
+  }
+}
+
+//-----------Layout-----------------
 .item-with-buttons-region-wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -8,7 +16,7 @@
 .items-no-wrap {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   div {
     margin: 0 !important;
@@ -16,12 +24,11 @@
   }
 }
 
-@media (max-width: 450px) {
-  .t-Button-label {
-    display: none;
-  }
+.item-with-buttons-region-title-container {
+  margin-right: 2rem;
 }
 
+//-----------Overriding apex styles-----------------
 .item-with-buttons-region-wrapper {
   .t-Form-labelContainer {
     display: none;
@@ -36,6 +43,39 @@
   }
 }
 
+//-----------USER OPTIONS------------------------
+
+//-----------Title width options-----------------
 .item-with-buttons-region-title-container {
-  width: 15%;
+     width: 5%;
+}
+.item-with-buttons-region-title10 {
+  .item-with-buttons-region-title-container {
+      width: 10%;
+  }
+}
+.item-with-buttons-region-title15 {
+  .item-with-buttons-region-title-container {
+      width: 15%;
+  }
+}
+.item-with-buttons-region-title20 {
+  .item-with-buttons-region-title-container {
+      width: 20%;
+  }
+}
+.item-with-buttons-region-title25 {
+  .item-with-buttons-region-title-container {
+      width: 25%;
+  }
+}
+
+//-----------Stretch fields-----------------
+.item-with-buttons-stretch {
+   .items-no-wrap {
+      flex-grow: 1;
+      > .container {
+        flex-grow: 1;
+    }
+  }
 }
